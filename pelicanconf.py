@@ -17,3 +17,7 @@ AUTHOR_FEED_RSS = None
 DEFAULT_PAGINATION = 10
 
 RELATIVE_URLS = False
+
+THEME = 'themes/elegant'
+THEME_TEMPLATES_OVERRIDES = ['theme_overrides']
+DISPLAY_PAGES_ON_MENU = True
