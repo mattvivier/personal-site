@@ -1,4 +1,5 @@
 Title: Footer Test
+Date: 2026-09-06
 Status: hidden
 Save_as: private/footer-test/index.html
 URL: private/footer-test/
