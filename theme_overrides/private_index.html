@@ -17,14 +17,19 @@
 </div>
 </div>
 
+{# Only hidden articles actually under /private/ are truly Access-gated --
+   a hidden article elsewhere is merely unlisted, not password protected,
+   so it's deliberately excluded from this page. #}
 <div class="row-fluid">
 <div class="span10 offset2">
 <div class="blog-archives">
 {% for article in (articles + hidden_articles) | sort(attribute='date', reverse=True) %}
+{% if article in articles or article.url.startswith('private/') %}
 <div itemscope>
 <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
 <time itemprop="dateCreated" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 </div>
