@@ -1,4 +1,4 @@
-Title: Private
+Title: Family & Friends
 Save_as: private/index.html
 URL: private/
 Template: private_index
