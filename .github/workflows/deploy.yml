@@ -23,6 +23,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+      - name: Fetch Elegant theme
+        run: git clone --depth 1 https://github.com/Pelican-Elegant/elegant.git themes/elegant
       - run: pelican content -o output -s pelicanconf.py
       - uses: actions/upload-pages-artifact@v3
         with:
