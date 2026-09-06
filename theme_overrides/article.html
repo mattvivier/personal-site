@@ -1,0 +1,17 @@
+{% extends "!theme/article.html" %}
+
+{# Appends a contact footer to every article whose URL lives under /private/ --
+   i.e. the actual Family & Friends posts, not just anything marked hidden.
+   Public articles render exactly as the Elegant theme normally would. #}
+
+{% block content %}
+{{ super() }}
+{% if article.url.startswith('private/') %}
+<div class="row-fluid">
+<div class="span8 offset2 article-content">
+<hr/>
+<p>I want to hear from you! Let me know what you're up to at <a href="mailto:mattvivier@gmail.com">mattvivier@gmail.com</a> or <a href="sms:+16175966516">617-596-6516</a>.</p>
+</div>
+</div>
+{% endif %}
+{% endblock content %}
