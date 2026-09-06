@@ -8,7 +8,7 @@ OUTPUT_PATH = 'output'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
