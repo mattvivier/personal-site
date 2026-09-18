@@ -12,8 +12,8 @@ Reminder for adding a new private post:
 1. Create content/private-<slug>.md as an ARTICLE (not a page), with:
      Title: Your Title
      Status: hidden
-     Save_as: private/<slug>/index.html
-     URL: private/<slug>/
+     Save_as: private/<slug>.html
+     URL: private/<slug>.html
 2. Push it (same as any other post).
 
 Status: hidden keeps it off the homepage, RSS/Atom feed, and category/tag
