@@ -14,8 +14,8 @@ Summary:
 Category:
 Tags:
 Status: hidden
-Save_as: private/<slug>/index.html
-URL: private/<slug>/
+Save_as: private/<slug>.html
+URL: private/<slug>.html
 
 <!--
 FIELD NOTES
@@ -43,22 +43,29 @@ Status -- pick one:
              and let them default.
 
 Save_as / URL -- REQUIRED for anything meant to be private, and they must
-both point under private/<slug>/. Forgetting these is the one mistake that
-actually matters: the post becomes merely unlisted, not gated by Cloudflare
-Access, and anyone with the link could read it even without logging in.
+both point under private/. Forgetting these is the one mistake that actually
+matters: the post becomes merely unlisted, not gated by Cloudflare Access,
+and anyone with the link could read it even without logging in.
 -->
 
 <!--
 PHOTOS
 
-Public photos  -> content/images/
-                  ![Caption]({static}/images/filename.jpg)
+The storage folder and the {static} reference path must match EXACTLY --
+Pelican maps a {static} link straight to the file's location relative to
+content/, so if these two don't agree the image just won't resolve.
 
-Private photos -> content/private-<slug>-images/
-                  ![Caption]({static}/private/<slug>/filename.jpg)
-                  This keeps the image itself gated under /private/ along
-                  with the post text -- an image pulled from content/images/
-                  would leak publicly even inside an otherwise-private post.
+Public photos:
+  Store at:     content/images/filename.jpg
+  Reference as: ![Caption]({static}/images/filename.jpg)
+
+Private photos:
+  Store at:     content/private/<slug>/filename.jpg
+  Reference as: ![Caption]({static}/private/<slug>/filename.jpg)
+  (same <slug> as this post's Save_as/URL above)
+  This keeps the image itself gated under /private/ along with the post text
+  -- an image pulled from content/images/ would leak publicly even inside an
+  otherwise-private post.
 
 No footer to add -- the "text or email me" contact line appends automatically
 to anything whose URL starts with private/.
