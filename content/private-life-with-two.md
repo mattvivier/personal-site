@@ -80,4 +80,4 @@ Life / you
 Frequent visitors of this website may notice that this is the first thing I've posted in... _nine years_.
 
 # This is a photo of a dog
-![this is a caption]({static}/private/life-with-two/bracco.jpg)
+![this is a caption]({static}/private/life-with-two/bracco.avif)
